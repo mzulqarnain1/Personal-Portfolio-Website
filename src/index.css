@@ -1,22 +1,5 @@
-@import "https://use.typekit.net/kmj5qkr.css";
-
-@font-face {
-  font-family: "Agustina Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Agustina Regular"),
-    url("./assets/fonts/Agustina.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
-  font-display: swap;
-}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "IBM Plex Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 html,
 body {
@@ -24,15 +7,25 @@ body {
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font-family: "Public Sans", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* Media Query */
-@media (max-width: 1380px) {
-  html,
-  body {
-    font-size: 16px;
-    line-height: normal;
-  }
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+p,
+dl,
+dd {
+  margin: 0;
+}
+a {
+  color: inherit;
+}
+::selection {
+  background: #1b4b46;
+  color: #fff;
 }

@@ -1,11 +1,8 @@
-@import "../../_globalColor";
+@import "../../globalColor";
 
-.footer-text {
+.site-foot {
+  padding: 22px 0;
   text-align: center;
-  color: $subTitle !important;
-}
-
-.footer-div {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+  font-size: 12px;
+  color: $inkSoft;
 }

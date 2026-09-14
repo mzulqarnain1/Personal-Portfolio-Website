@@ -1,38 +1,100 @@
-@import "../../_globalColor";
+@import "../../globalColor";
 
-.platform-badges-section {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto 20px;
-  padding: 18px 20px;
-  border-radius: 14px;
-  border: 1px solid $lightBorder1;
-  background-color: $lightBackground3;
-  text-align: center;
+.platform-badges {
+  margin-bottom: 26px;
 }
 
-.platform-badges-label {
+.platform-badges__caption {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.platform-badges__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.platform-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.platform-badge__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--badge-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin: 0 0 14px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: $titleColor;
+  flex-shrink: 0;
 }
 
-.platform-badges-icon {
-  font-size: 13px;
-  line-height: 1;
+.platform-badge__icon svg {
+  width: 100%;
+  height: auto;
 }
 
-.platform-badges-row {
+.platform-badge__text {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.platform-badge__text strong {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.platform-badge__text span {
+  font-size: 11px;
+}
+
+/* honor — recognition framing, used in the Hero on the light background */
+.platform-badges--honor .platform-badges__caption {
+  color: $inkSoft;
+}
+
+.platform-badges--honor .platform-badge {
+  border: 1px solid $line;
+  color: $ink;
+}
+
+.platform-badges--honor .platform-badge:hover {
+  border-color: var(--badge-color);
+}
+
+.platform-badges--honor .platform-badge__text span {
+  color: $inkSoft;
+}
+
+/* hire — call-to-action framing, used in the Closing section on the dark background */
+.platform-badges--hire .platform-badges__caption {
+  color: #8fb8ac;
+}
+
+.platform-badges--hire .platform-badges__row {
   justify-content: center;
-  gap: 16px;
+}
+
+.platform-badges--hire .platform-badge {
+  border: 1px solid #3a655d;
+  color: #eef4f1;
+  background: transparent;
+}
+
+.platform-badges--hire .platform-badge:hover {
+  border-color: var(--badge-color);
+  background: rgba(238, 244, 241, 0.06);
+}
+
+.platform-badges--hire .platform-badge__text span {
+  color: #b7d0c7;
 }

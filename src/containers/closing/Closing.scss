@@ -1,0 +1,59 @@
+@import "../../globalColor";
+
+.closing {
+  background: $accentDeep;
+  color: #eef4f1;
+}
+
+.closing .wrap {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+
+.closing__eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8fb8ac;
+  margin-bottom: 18px;
+}
+
+.closing h2 {
+  font-family: $fontSerif;
+  font-weight: 500;
+  font-size: clamp(24px, 3.4vw, 34px);
+  max-width: 20ch;
+  margin: 0 auto 18px;
+}
+
+.closing p {
+  color: #b7d0c7;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.closing .links {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.closing .btn--primary {
+  background: #eef4f1;
+  color: $accentDeep;
+  border-color: #eef4f1;
+}
+
+.closing .btn--ghost {
+  border-color: #3a655d;
+  color: #eef4f1;
+}
+
+.closing__platforms {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

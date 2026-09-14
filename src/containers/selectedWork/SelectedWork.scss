@@ -1,0 +1,65 @@
+@import "../../globalColor";
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: $line;
+  border: 1px solid $line;
+}
+
+@media (max-width: 760px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-card {
+  background: $bg;
+  padding: 24px 22px;
+  text-decoration: none;
+  color: $ink;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: $accent;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+
+.work-card:hover {
+  background: $surface;
+}
+
+.work-card:hover::before {
+  transform: scaleX(1);
+}
+
+.work-card h3 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.work-card p {
+  font-size: 13px;
+  color: $inkSoft;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.work-card .go {
+  font-size: 12px;
+  font-weight: 600;
+  color: $accent;
+}

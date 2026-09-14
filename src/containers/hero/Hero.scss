@@ -1,0 +1,66 @@
+@import "../../globalColor";
+
+.hero {
+  padding-top: 64px;
+  padding-bottom: 56px;
+}
+
+.hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $accent;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero__eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: $accent;
+}
+
+.hero h1 {
+  font-family: $fontSerif;
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  max-width: 16ch;
+}
+
+.hero__lede {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #333a35;
+  max-width: 58ch;
+  margin: 24px 0 28px;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 13px;
+  color: $inkSoft;
+}
+
+.hero__meta a {
+  text-decoration: none;
+}
+
+.hero__meta a:hover {
+  color: $accent;
+}
