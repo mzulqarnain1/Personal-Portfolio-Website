@@ -25,12 +25,11 @@ body {
 
 .btn--primary {
   background: $ink;
-  color: #fff;
+  color: $bg;
 }
 
 .btn--primary:hover {
-  background: $accentDeep;
-  border-color: $accentDeep;
+  opacity: 0.82;
 }
 
 .btn--ghost {

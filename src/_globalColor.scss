@@ -1,13 +1,48 @@
 /* Design tokens for the site. Change these to restyle globally. */
 
-// palette
-$bg: #fcfcfb;
-$surface: #f0efe8;
-$ink: #16191b;
-$inkSoft: #5a6058;
-$line: #e1ded2;
-$accent: #1b4b46;
-$accentDeep: #0f2e2b;
+:root {
+  --bg: #fcfcfb;
+  --surface: #f0efe8;
+  --ink: #16191b;
+  --inkSoft: #5a6058;
+  --line: #e1ded2;
+  --accent: #1b4b46;
+  --accentDeep: #0f2e2b;
+}
+
+/* System preference applies only when the visitor hasn't chosen explicitly. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15181a;
+    --surface: #1d2220;
+    --ink: #eef1ee;
+    --inkSoft: #98a29a;
+    --line: #2a302c;
+    --accent: #5cc2b0;
+    --accentDeep: #163f3a;
+  }
+}
+
+/* Explicit choice (site's theme toggle) always wins. */
+:root[data-theme="dark"] {
+  --bg: #15181a;
+  --surface: #1d2220;
+  --ink: #eef1ee;
+  --inkSoft: #98a29a;
+  --line: #2a302c;
+  --accent: #5cc2b0;
+  --accentDeep: #163f3a;
+}
+
+// palette — aliased to the custom properties above so theme switching
+// (data-theme attribute or prefers-color-scheme) works everywhere $these are used.
+$bg: var(--bg);
+$surface: var(--surface);
+$ink: var(--ink);
+$inkSoft: var(--inkSoft);
+$line: var(--line);
+$accent: var(--accent);
+$accentDeep: var(--accentDeep);
 
 // type
 $fontSerif: "Newsreader", Georgia, serif;

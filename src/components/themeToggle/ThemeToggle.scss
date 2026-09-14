@@ -1,0 +1,43 @@
+@import "../../globalColor";
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: clamp(14px, 4vw, 32px);
+  z-index: 500;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $line;
+  border-radius: 50%;
+  background: $bg;
+  color: $ink;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  border-color: $accent;
+  color: $accent;
+}
+
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 520px) {
+  .theme-toggle {
+    top: 12px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .theme-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
+}
